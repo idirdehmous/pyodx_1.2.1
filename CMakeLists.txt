@@ -9,7 +9,7 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 
 # Scikit-build provides Python variables
-find_package(Python3 REQUIRED COMPONENTS Interpreter Development.Module)
+find_package(Python3 REQUIRED COMPONENTS Interpreter Development.Module )
 
 
 
