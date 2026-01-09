@@ -31,9 +31,11 @@ jobs:
           CIBW_SKIP: "*musllinux*"
           CIBW_ARCHS_LINUX: "x86_64"
           CIBW_MANYLINUX_X86_64_IMAGE: "manylinux2014"
+          CIBW_BEFORE_BUILD: "pip install numpy"
+          CIBW_BUILD_VERBOSITY: "1"
         run: |
-          cibuildwheel --platform linux
-
+              cibuildwheel --platform linux
+    
       - name: Build sdist
         run: |
           python -m build --sdist
