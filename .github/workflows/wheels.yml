@@ -25,14 +25,19 @@ jobs:
           python -m pip install --upgrade pip
           pip install cibuildwheel build twine
 
-      - name: Build wheels (manylinux)
-        env:
-          CIBW_BUILD: "cp39-* cp310-* cp311-* cp312-*"
-          CIBW_SKIP: "*musllinux*"
-          CIBW_ARCHS_LINUX: "x86_64"
-          CIBW_MANYLINUX_X86_64_IMAGE: "manylinux2014"
+
+
+    - name: Build wheels (manylinux)
+      env:
+         CIBW_BUILD: "cp39-* cp310-* cp311-* cp312-*"
+         CIBW_SKIP: "*musllinux*"
+         CIBW_ARCHS_LINUX: "x86_64"
+         CIBW_MANYLINUX_X86_64_IMAGE: "manylinux2014"
+         CIBW_BEFORE_BUILD: "pip install numpy"
+         CIBW_BUILD_VERBOSITY: "1"
         run: |
-          cibuildwheel --platform linux
+           cibuildwheel --platform linux
+   
 
       - name: Build sdist
         run: |
