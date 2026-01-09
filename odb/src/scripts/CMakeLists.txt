@@ -1,3 +1,4 @@
+# NOT NEEDED FOR pyodx  
 #configure_file(use_odb.csh.in ${CMAKE_BINARY_DIR}/bin/use_odb.csh @ONLY)
 #configure_file(use_odb.sh.in ${CMAKE_BINARY_DIR}/bin/use_odb.sh @ONLY)
 
