@@ -22,7 +22,9 @@ target_include_directories(pyodx  PRIVATE
 
 #target_link_directories(pyodb  PRIVATE ${CMAKE_BINARY_DIR}/home/idehmous/Desktop/pkg/conda/envs/wradlib/lib/python3.9/site-packages/pyodb/lib )
 
-target_link_libraries  (pyodx  PRIVATE odb_lib )
+#target_link_libraries  (pyodx  PRIVATE odb_lib )
+
+target_link_libraries(pyodx PRIVATE Python3::Module odb_lib)
 
 # Nom propre pour module Python (.so)
 set_target_properties(pyodx  PROPERTIES
