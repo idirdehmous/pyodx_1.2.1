@@ -1,7 +1,7 @@
 
 # Main CMakeFiles.txt 
 cmake_minimum_required(VERSION 3.15)
-project(pyodb LANGUAGES C CXX)
+project(pyodx LANGUAGES C CXX)
 
 
 # Force position-independent code for shared libs
