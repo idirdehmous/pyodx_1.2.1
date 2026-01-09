@@ -9,9 +9,8 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 
 # Scikit-build provides Python variables
-#find_package (Python3 COMPONENTS Interpreter Development)
-#find_package (Python3 COMPONENTS Development REQUIRED)
-find_package(Python3 REQUIRED COMPONENTS Interpreter Development)
+find_package(Python3 REQUIRED COMPONENTS Interpreter Development.Module)
+
 
 
 # Include ecmwf macros 
