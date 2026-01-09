@@ -100,7 +100,7 @@ endif()
 
 find_package(Dl REQUIRED)
 #find_package(PythonInterp REQUIRED)
-find_package (Python3 COMPONENTS Interpreter Development)
+find_package (Python3 COMPONENTS Interpreter Development.Module)
 find_program(ODB_AR NAMES sxar ar)
 find_program(ODB_GZIP NAMES gzip)
 find_program(ODB_GUNZIP NAMES gunzip)
