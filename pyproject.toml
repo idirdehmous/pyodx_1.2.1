@@ -26,9 +26,12 @@ cmake.args        = ["-G", "Unix Makefiles"]
 cmake.source-dir  = "."
 wheel.install-dir = "pyodx"
 
+[tool.cibuildwheel.linux]
+before-all = "yum install -y epel-release && yum install -y flex flex-devel bison"
 
 [tool.cibuildwheel]
 build = "cp39-* cp310-* cp311-* cp312-*"
 skip = "*musllinux*"
 manylinux-x86_64-image = "manylinux2014"
 build-verbosity = 1
+
